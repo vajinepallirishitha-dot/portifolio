@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Rishitha Vajinepalli • Portfolio | Software Developer</title>
+  <meta name="description" content="Portfolio of Rishitha Vajinepalli — B.Tech Computer Science student at Vignan's University. Skilled in Python, React.js, Web Development, and Computer Vision." />
+  <meta name="color-scheme" content="dark light" />
+  
+  <!-- Web Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,400&family=Inter:wght@400;500;600;700;800&family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  
+  <!-- Pure CSS Stylesheet -->
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Pure CSS State Controllers (No JavaScript) -->
+  <input type="checkbox" id="theme-toggle" class="theme-toggle-input" aria-label="Toggle Dark/Light Theme" />
+  <input type="checkbox" id="menu-toggle" class="menu-toggle-input" aria-label="Toggle Navigation Menu" />
+
+  <!-- Accessibility Skip Link -->
+  <a href="#main" class="skip-link">Skip to content</a>
+
+  <!-- Animated Constellation Starfield Background (Pure CSS & SVG Animation) -->
+  <div class="constellation-bg" aria-hidden="true">
+    <svg class="constellation-svg" viewBox="0 0 1440 900" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <radialGradient id="nebula-radial" cx="50%" cy="30%" r="65%">
+          <stop offset="0%" stop-color="#142144" stop-opacity="0.85"/>
+          <stop offset="45%" stop-color="#0b1328" stop-opacity="0.95"/>
+          <stop offset="100%" stop-color="#060814" stop-opacity="1"/>
+        </radialGradient>
+      </defs>
+      <rect width="100%" height="100%" fill="url(#nebula-radial)"/>
+      <g stroke="rgba(100, 160, 240, 0.16)" stroke-width="0.8" fill="none">
+        <line x1="85" y1="50" x2="226" y2="409"/>
+        <line x1="226" y1="409" x2="275" y2="407"/>
+        <line x1="275" y1="407" x2="209" y2="409"/>
+        <line x1="209" y1="409" x2="354" y2="493"/>
+        <line x1="354" y1="493" x2="370" y2="566"/>
+        <line x1="370" y1="566" x2="496" y2="537"/>
+        <line x1="496" y1="537" x2="566" y2="738"/>
+        <line x1="460" y1="801" x2="620" y2="869"/>
+        <line x1="583" y1="270" x2="778" y2="383"/>
+        <line x1="778" y1="383" x2="760" y2="611"/>
+        <line x1="760" y1="611" x2="724" y2="638"/>
+        <line x1="885" y1="368" x2="1136" y2="449"/>
+        <line x1="1136" y1="109" x2="1169" y2="223"/>
+        <line x1="1169" y1="223" x2="1226" y2="304"/>
+        <line x1="1226" y1="304" x2="1329" y2="134"/>
+        <line x1="1329" y1="134" x2="1347" y2="93"/>
+        <line x1="1321" y1="874" x2="1136" y2="449"/>
+      </g>
+      <g>
+        <circle cx="1329" cy="134" r="0.6" fill="rgba(220, 235, 255, 0.65)" class="star-twinkle-1"/>
+        <circle cx="583" cy="270" r="0.7" fill="rgba(220, 235, 255, 0.65)" class="star-twinkle-2"/>
+        <circle cx="229" cy="712" r="1.0" fill="rgba(220, 235, 255, 0.65)" class="star-twinkle-3"/>
+        <circle cx="1136" cy="109" r="1.0" fill="rgba(220, 235, 255, 0.65)" class="star-twinkle-4"/>
+        <circle cx="85" cy="50" r="0.7" fill="rgba(220, 235, 255, 0.65)" class="star-twinkle-1"/>
+        <circle cx="496" cy="537" r="1.0" fill="rgba(220, 235, 255, 0.65)" class="star-twinkle-2"/>
+        <circle cx="1169" cy="223" r="1.0" fill="rgba(220, 235, 255, 0.65)" class="star-twinkle-3"/>
+        <circle cx="1136" cy="449" r="0.7" fill="rgba(220, 235, 255, 0.65)" class="star-twinkle-4"/>
+        <circle cx="1226" cy="304" r="1.1" fill="rgba(220, 235, 255, 0.65)" class="star-twinkle-1"/>
+        <circle cx="33" cy="797" r="1.1" fill="rgba(220, 235, 255, 0.65)" class="star-twinkle-2"/>
+        <circle cx="885" cy="368" r="0.8" fill="rgba(220, 235, 255, 0.65)" class="star-twinkle-3"/>
+        <circle cx="460" cy="801" r="0.8" fill="rgba(220, 235, 255, 0.65)" class="star-twinkle-4"/>
+        <circle cx="209" cy="409" r="0.7" fill="rgba(220, 235, 255, 0.65)" class="star-twinkle-1"/>
+        <circle cx="724" cy="638" r="0.8" fill="rgba(220, 235, 255, 0.65)" class="star-twinkle-2"/>
+        <circle cx="620" cy="869" r="1.0" fill="rgba(220, 235, 255, 0.65)" class="star-twinkle-1"/>
+        <circle cx="760" cy="611" r="0.7" fill="rgba(220, 235, 255, 0.65)" class="star-twinkle-2"/>
+      </g>
+    </svg>
+  </div>
+
+  <!-- Sticky Site Navigation Header -->
+  <header class="site-header">
+    <div class="nav-container">
+      <!-- Brand -->
+      <a class="brand" href="#hero" aria-label="Rishitha Vajinepalli Home">
+        <span class="brand-plus">+</span>
+        <div class="brand-text">
+          <span class="brand-line">Rishitha</span>
+          <span class="brand-line">Vajinepalli</span>
+        </div>
+      </a>
+
+      <!-- Navigation Links -->
+      <nav id="navLinks" class="nav-links" aria-label="Main Navigation">
+        <a class="nav-link" href="#about">About</a>
+        <a class="nav-link" href="#timeline">Timeline</a>
+        <a class="nav-link" href="#skills">Skills</a>
+        <a class="nav-link" href="#stack">Tech Stack</a>
+        <a class="nav-link" href="#projects">Projects</a>
+        <a class="nav-link" href="#certs">Certifications</a>
+        <a class="nav-link" href="#contact">Contact</a>
+      </nav>
+
+      <!-- Navigation Actions -->
+      <div class="nav-controls">
+        <!-- View Resume Button -->
+        <a href="Rishitha_Vajinepalli_Resume.pdf" target="_blank" rel="noreferrer" class="nav-resume-btn" id="resumeOpenBtn" title="View Resume PDF in New Tab" aria-label="View Resume">
+          <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"></path>
+            <polyline points="14 2 14 8 20 8"></polyline>
+            <line x1="16" y1="13" x2="8" y2="13"></line>
+            <line x1="16" y1="17" x2="8" y2="17"></line>
+            <line x1="10" y1="9" x2="8" y2="9"></line>
+          </svg>
+          <span>Resume</span>
+        </a>
+
+        <!-- Download Resume Button -->
+        <a href="Rishitha_Vajinepalli_Resume.pdf" download="Rishitha_Vajinepalli_Resume.pdf" class="nav-icon-btn" id="resumeDownloadBtn" title="Download Resume PDF" aria-label="Download Resume">
+          <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+            <polyline points="7 10 12 15 17 10"></polyline>
+            <line x1="12" y1="15" x2="12" y2="3"></line>
+          </svg>
+        </a>
+
+        <!-- Pure CSS Dark / Light Theme Toggle Button -->
+        <label for="theme-toggle" class="nav-icon-btn" title="Toggle Dark/Light Mode" aria-label="Toggle Theme" style="cursor: pointer;">
+          <!-- Moon Icon (Shown in Dark Mode) -->
+          <svg class="theme-icon-moon" viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+          <!-- Sun Icon (Shown in Light Mode) -->
+          <svg class="theme-icon-sun" viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+        </label>
+
+        <!-- Pure CSS Mobile Menu Hamburger Toggle -->
+        <label for="menu-toggle" class="menu-btn" title="Toggle Navigation Menu" aria-label="Toggle Menu">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </label>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- HERO SECTION -->
+    <section id="hero" class="hero-section" aria-label="Introduction">
+      <div class="hero-container">
+        <!-- Left Hero Copy -->
+        <div class="hero-content">
+          <h1 class="hero-headline">
+            Hi, I'm <span class="highlight-name">Rishitha</span> — building responsive, user‑centric software.
+          </h1>
+          <p class="hero-sub">
+            B.Tech CSE Student • Web Developer • Python • Computer Vision
+          </p>
+
+          <!-- Contact Quick Pills -->
+          <div class="hero-contact-row">
+            <a class="contact-pill" href="mailto:vajinepallirishitha@gmail.com" aria-label="Email Rishitha">
+              <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="3" y="5" width="18" height="14" rx="2"></rect>
+                <path d="m4 7 8 6 8-6"></path>
+              </svg>
+              <span>vajinepallirishitha@gmail.com</span>
+            </a>
+            <a class="contact-pill" href="tel:+919390541270" aria-label="Call Rishitha">
+              <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.6a2 2 0 0 1-.5 2l-1.3 1.3a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2-.5 13.7 13.7 0 0 0 2.6.7 2 2 0 0 1 1.7 2Z"></path>
+              </svg>
+              <span>+91 93905 41270</span>
+            </a>
+            <div class="contact-pill" title="Location">
+              <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+              </svg>
+              <span>Guntur, AP, India</span>
+            </div>
+          </div>
+
+          <!-- Hero Actions / CTAs -->
+          <div class="hero-actions-row">
+            <a class="btn-gradient" href="#projects">
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+              <span>View Projects</span>
+            </a>
+            <a class="btn-dark" href="https://github.com/vajinepallirishitha-dot" target="_blank" rel="noreferrer" aria-label="GitHub Profile">
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
+                <path d="M12 .5A12 12 0 0 0 0 12.7c0 5.4 3.4 10 8.1 11.6.6.1.9-.3.9-.7v-2.6c-3.3.8-4-1.5-4-1.5-.5-1.2-1.2-1.5-1.2-1.5-1-.7.1-.7.1-.7 1.1.1 1.7 1.1 1.7 1.1 1 .1.8 2.1 2.9 1.5.1-.8.4-1.3.7-1.6-2.6-.3-5.4-1.4-5.4-6.2 0-1.4.5-2.6 1.3-3.5-.1-.3-.6-1.7.1-3.5 0 0 1-.3 3.5 1.3a11.9 11.9 0 0 1 6.4 0c2.4-1.6 3.4-1.3 3.4-1.3.7 1.8.2 3.2.1 3.5.8.9 1.3 2.1 1.3 3.5 0 4.8-2.8 5.8-5.4 6.1.4.3.8 1 .8 2.1v3.1c0 .4.3 .8.9 .7 4.7-1.5 8.1-6.1 8.1-11.5A12 12 0 0 0 12 .5Z"/>
+              </svg>
+              <span>GitHub</span>
+            </a>
+            <a class="btn-dark" href="https://leetcode.com/u/241fa04636/" target="_blank" rel="noreferrer" aria-label="LeetCode Profile">
+              <span>LeetCode</span>
+            </a>
+            <a class="btn-dark" href="https://www.linkedin.com/in/rishitha-vajinepalli-9a40b9338" target="_blank" rel="noreferrer" aria-label="LinkedIn Profile">
+              <span>LinkedIn</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Right Hero Aside: Profile Card -->
+        <aside class="hero-aside" aria-label="Profile Highlight Card">
+          <div class="profile-card">
+            <div class="profile-card-header">
+              <img class="profile-avatar-img" src="rishitha.png" alt="Rishitha Vajinepalli Portrait" />
+              <div class="profile-meta">
+                <span class="profile-name">Rishitha Vajinepalli</span>
+                <span class="profile-sub">B.Tech CSE • Web Developer</span>
+              </div>
+            </div>
+            <div class="profile-stats-grid">
+              <div class="stat-card">
+                <span class="stat-number">3+</span>
+                <span class="stat-label">Projects</span>
+              </div>
+              <div class="stat-card">
+                <span class="stat-number">4</span>
+                <span class="stat-label">Years</span>
+              </div>
+              <div class="stat-card">
+                <span class="stat-number">5+</span>
+                <span class="stat-label">Certifications</span>
+              </div>
+              <div class="stat-card">
+                <span class="stat-number">8.5</span>
+                <span class="stat-label">CGPA</span>
+              </div>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section id="about" class="section container" aria-label="About Me">
+      <div class="section-heading">
+        <h2>About Me</h2>
+        <p>B.Tech Computer Science student at Vignan's University passionate about responsive web development, problem-solving, and software engineering.</p>
+      </div>
+
+      <div class="about-grid">
+        <!-- Bio Card -->
+        <div class="about-panel">
+          <div class="about-kv">
+            <div class="about-img">
+              <img src="rishitha.png" alt="Rishitha Vajinepalli" />
+            </div>
+            <div class="kv-meta">
+              <div class="kv-name">Rishitha Vajinepalli</div>
+              <div class="kv-role">CSE Undergraduate • Developer</div>
+              <div class="kv-links">
+                <a class="btn-sm" href="mailto:vajinepallirishitha@gmail.com">
+                  <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m4 7 8 6 8-6"/></svg>
+                  <span>Email</span>
+                </a>
+                <a class="btn-sm" href="https://www.linkedin.com/in/rishitha-vajinepalli-9a40b9338" target="_blank" rel="noreferrer">
+                  <span>LinkedIn</span>
+                </a>
+                <a class="btn-sm" href="https://github.com/vajinepallirishitha-dot" target="_blank" rel="noreferrer">
+                  <span>GitHub</span>
+                </a>
+              </div>
+            </div>
+          </div>
+          <p class="about-bio">
+            Motivated B.Tech Computer Science student at Vignan's University with strong knowledge of Python, Java, C, SQL, and frontend development using React.js. Skilled in responsive web development, problem-solving, debugging, and software development fundamentals. Experienced in building projects and solving coding problems on LeetCode and CodeChef, and seeking internship opportunities in software engineering and frontend development.
+          </p>
+          <div class="about-pills" role="list">
+            <div class="about-pill" role="listitem">B.Tech — CSE</div>
+            <div class="about-pill" role="listitem">Vignan's University (VFSTR)</div>
+            <div class="about-pill" role="listitem">CGPA 8.5 / 10.00</div>
+          </div>
+        </div>
+
+        <!-- Current Focus Card -->
+        <div class="about-panel">
+          <h3 class="focus-heading">Current Focus</h3>
+          <ul class="focus-list">
+            <li>Frontend & UI Engineering with React.js, modern JavaScript, HTML5 & CSS3</li>
+            <li>Computer Vision & AI fundamentals (OpenCV, YOLO, Speech Recognition)</li>
+            <li>Data Structures & Algorithms, regular problem-solving on LeetCode</li>
+            <li>Relational Databases & Storage: SQL (MySQL) and MongoDB basics</li>
+            <li>Software Debugging, Clean Code, Git Version Control & Team Collaboration</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- TIMELINE / EDUCATION SECTION -->
+    <section id="timeline" class="section container journey-section" aria-label="Education and Timeline">
+      <!-- Anchor alias for education links -->
+      <span id="education" style="display:block; position:relative; top:-90px; visibility:hidden;"></span>
+      
+      <div class="timeline-heading">
+        <h2>Education & Milestones</h2>
+        <p>Academic milestones, foundational learning, and highlights.</p>
+      </div>
+
+      <div class="timeline">
+        <!-- Milestone 1: B.Tech -->
+        <div class="timeline-item">
+          <div class="timeline-marker" aria-hidden="true"></div>
+          <h3>B.Tech — Computer Science & Engineering</h3>
+          <span class="timeline-date">2024 – 2028 • CGPA: 8.5 / 10.00</span>
+          <p>Vignan's Foundation for Science, Technology and Research (VFSTR), Vadlamudi, Guntur, AP. Focusing on Computer Science fundamentals, Object-Oriented Programming, Data Structures, Web Development, and Artificial Intelligence.</p>
+        </div>
+
+        <!-- Milestone 2: Intermediate -->
+        <div class="timeline-item">
+          <div class="timeline-marker" aria-hidden="true"></div>
+          <h3>Board of Intermediate Education (MPC)</h3>
+          <span class="timeline-date">2022 – 2024 • CGPA: 9.6 / 10.00</span>
+          <p>Narayana Junior College, Nidamanuru, Vijayawada, Andhra Pradesh. Specialization in Mathematics, Physics, and Chemistry with academic excellence.</p>
+        </div>
+
+        <!-- Milestone 3: High School -->
+        <div class="timeline-item">
+          <div class="timeline-marker" aria-hidden="true"></div>
+          <h3>Board of Secondary Education</h3>
+          <span class="timeline-date">2021 – 2022 • CGPA: 9.8 / 10.00</span>
+          <p>Sri Chaitanya High School, Gampalgudem, Andhra Pradesh. Built strong fundamentals in analytical mathematics, science, and computer basics.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS SECTION (Pure CSS Animated Progress Bars) -->
+    <section id="skills" class="section container" aria-label="Skills">
+      <div class="skills-heading">
+        <h2>Skills & Proficiencies</h2>
+        <p>Core programming, frontend engineering, and computer science foundations.</p>
+      </div>
+
+      <!-- Pure CSS Animated Progress Bars -->
+      <div class="skills-bars-grid">
+        <div class="skill-bar-card">
+          <div class="skill-head">
+            <span class="skill-name">Python</span>
+            <span class="skill-chip">Strong • 85%</span>
+          </div>
+          <div class="bar"><div class="fill" style="--target-width: 85%;"></div></div>
+        </div>
+
+        <div class="skill-bar-card">
+          <div class="skill-head">
+            <span class="skill-name">React.js & Web UI</span>
+            <span class="skill-chip">Strong • 82%</span>
+          </div>
+          <div class="bar"><div class="fill" style="--target-width: 82%;"></div></div>
+        </div>
+
+        <div class="skill-bar-card">
+          <div class="skill-head">
+            <span class="skill-name">JavaScript (ES6+)</span>
+            <span class="skill-chip">Strong • 80%</span>
+          </div>
+          <div class="bar"><div class="fill" style="--target-width: 80%;"></div></div>
+        </div>
+
+        <div class="skill-bar-card">
+          <div class="skill-head">
+            <span class="skill-name">Java & C</span>
+            <span class="skill-chip">Intermediate • 75%</span>
+          </div>
+          <div class="bar"><div class="fill" style="--target-width: 75%;"></div></div>
+        </div>
+
+        <div class="skill-bar-card">
+          <div class="skill-head">
+            <span class="skill-name">Data Structures & Algorithms</span>
+            <span class="skill-chip">Intermediate • 78%</span>
+          </div>
+          <div class="bar"><div class="fill" style="--target-width: 78%;"></div></div>
+        </div>
+
+        <div class="skill-bar-card">
+          <div class="skill-head">
+            <span class="skill-name">SQL & Databases</span>
+            <span class="skill-chip">Intermediate • 74%</span>
+          </div>
+          <div class="bar"><div class="fill" style="--target-width: 74%;"></div></div>
+        </div>
+
+        <div class="skill-bar-card">
+          <div class="skill-head">
+            <span class="skill-name">Computer Vision / OpenCV</span>
+            <span class="skill-chip">Intermediate • 70%</span>
+          </div>
+          <div class="bar"><div class="fill" style="--target-width: 70%;"></div></div>
+        </div>
+
+        <div class="skill-bar-card">
+          <div class="skill-head">
+            <span class="skill-name">UI/UX & Responsive Web</span>
+            <span class="skill-chip">Strong • 85%</span>
+          </div>
+          <div class="bar"><div class="fill" style="--target-width: 85%;"></div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TECH STACK SECTION -->
+    <section id="stack" class="section container" aria-label="Tech Stack">
+      <div class="stack-heading">
+        <h2>Tech Stack & Tools</h2>
+        <p>Languages, frameworks, databases, and developer utilities.</p>
+      </div>
+
+      <div class="stack-grid">
+        <!-- Frontend -->
+        <div class="stack-card">
+          <h3>Frontend / UI</h3>
+          <div class="stack-tags">
+            <span>React.js</span>
+            <span>JavaScript</span>
+            <span>HTML5</span>
+            <span>CSS3</span>
+            <span>Responsive Web</span>
+            <span>UI/UX</span>
+          </div>
+        </div>
+
+        <!-- Languages & Core -->
+        <div class="stack-card stack-back">
+          <h3>Languages & Core</h3>
+          <div class="stack-tags">
+            <span>Python</span>
+            <span>Java</span>
+            <span>C</span>
+            <span>OOPs</span>
+            <span>Data Structures</span>
+            <span>Algorithms</span>
+          </div>
+        </div>
+
+        <!-- Databases -->
+        <div class="stack-card stack-data">
+          <h3>Databases & Data</h3>
+          <div class="stack-tags">
+            <span>SQL</span>
+            <span>MySQL</span>
+            <span>MongoDB</span>
+            <span>JSON</span>
+          </div>
+        </div>
+
+        <!-- AI & Vision -->
+        <div class="stack-card stack-ai">
+          <h3>AI & Vision</h3>
+          <div class="stack-tags">
+            <span>OpenCV</span>
+            <span>YOLO</span>
+            <span>Speech Recognition</span>
+            <span>GTTS</span>
+            <span>NumPy</span>
+            <span>Deep Translator</span>
+          </div>
+        </div>
+
+        <!-- Tools & Soft Skills -->
+        <div class="stack-card stack-soft">
+          <h3>Tools & Soft Skills</h3>
+          <div class="stack-tags">
+            <span>Git</span>
+            <span>GitHub</span>
+            <span>VS Code</span>
+            <span>Problem Solving</span>
+            <span>Teamwork</span>
+            <span>Debugging</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURED PROJECTS SECTION -->
+    <section id="projects" class="section container work-section" aria-label="Featured Projects">
+      <div class="section-heading">
+        <h2>Featured Projects</h2>
+        <p>Practical software applications built with modern tools and clean architecture.</p>
+      </div>
+
+      <div class="project-grid-reference">
+        <!-- Project 1: Voice Translator -->
+        <article class="project-reference-card">
+          <div class="project-cover voice-cover">
+            <span>VOICE<br>TRANSLATOR</span>
+          </div>
+          <div class="project-info">
+            <h3><a href="https://github.com/vajinepallirishitha-dot/Real-Time-Voice-Translator" target="_blank" rel="noreferrer">Real-Time Voice Translator</a></h3>
+            <div class="tags">
+              <span>Python</span>
+              <span>Speech Recognition</span>
+              <span>Deep Translation</span>
+              <span>GTTS</span>
+              <span>Tkinter</span>
+            </div>
+            <p>Created a real-time AI voice translator that converts speech between multiple languages while preserving speaker tone and emotion for seamless cross-language communication.</p>
+            <a class="project-link" href="https://github.com/vajinepallirishitha-dot/Real-Time-Voice-Translator" target="_blank" rel="noreferrer">View on GitHub ↗</a>
+          </div>
+        </article>
+
+        <!-- Project 2: Traffic Violation Detection -->
+        <article class="project-reference-card">
+          <div class="project-cover traffic-cover">
+            <span>TRAFFIC<br>DETECTION</span>
+          </div>
+          <div class="project-info">
+            <h3><a href="https://github.com/vajinepallirishitha-dot/traffic-violation-detection" target="_blank" rel="noreferrer">Traffic Violation Detection</a></h3>
+            <div class="tags">
+              <span>Python</span>
+              <span>OpenCV</span>
+              <span>YOLO</span>
+              <span>Computer Vision</span>
+              <span>OCR</span>
+            </div>
+            <p>Developed an AI-powered traffic violation detection system that identifies red-light rule violations and vehicle compliance from video footage using computer vision and image processing.</p>
+            <a class="project-link" href="https://github.com/vajinepallirishitha-dot/traffic-violation-detection" target="_blank" rel="noreferrer">View on GitHub ↗</a>
+          </div>
+        </article>
+
+        <!-- Project 3: Brain Vault Gaming Platform -->
+        <article class="project-reference-card">
+          <div class="project-cover brain-cover">
+            <span>BRAIN VAULT<br>GAMING</span>
+          </div>
+          <div class="project-info">
+            <h3><a href="https://github.com/vajinepallirishitha-dot/Brainvault" target="_blank" rel="noreferrer">Brain Vault — Gaming Platform</a></h3>
+            <div class="tags">
+              <span>JavaScript</span>
+              <span>Full-Stack</span>
+              <span>Web Platform</span>
+              <span>Cognitive Games</span>
+              <span>HTML5 / CSS3</span>
+            </div>
+            <p>Developed an interactive web-based gaming platform featuring brain-training puzzles and quizzes with score tracking, timer functionality, and instant result evaluation.</p>
+            <a class="project-link" href="https://github.com/vajinepallirishitha-dot/Brainvault" target="_blank" rel="noreferrer">View on GitHub ↗</a>
+          </div>
+        </article>
+      </div>
+
+      <!-- View Detailed Projects Page Link -->
+      <div class="view-all-projects-row">
+        <a href="projects.html" class="btn-gradient">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+            <line x1="8" y1="21" x2="16" y2="21"></line>
+            <line x1="12" y1="17" x2="12" y2="21"></line>
+          </svg>
+          <span>Explore In-Depth Projects Showcase Page →</span>
+        </a>
+      </div>
+    </section>
+
+    <!-- CERTIFICATIONS & ACHIEVEMENTS SECTION -->
+    <section id="certs" class="section container" aria-label="Certifications and Achievements">
+      <!-- Anchor alias for certifications links -->
+      <span id="certifications" style="display:block; position:relative; top:-90px; visibility:hidden;"></span>
+
+      <div class="cert-heading">
+        <h2>Certifications & Achievements</h2>
+        <p>Industry credentials, academic honors, and co-curricular achievements with direct credential verification.</p>
+      </div>
+
+      <!-- Certifications Grid -->
+      <div class="cert-grid" id="certGrid">
+        <!-- Cert 1: AWS Cloud Practitioner -->
+        <a class="cert-card" href="https://www.linkedin.com/posts/rishitha-vajinepalli-9a40b9338_aws-cloudcomputing-awscloudpractitioner-activity-7471096721255825408--onZ" target="_blank" rel="noreferrer">
+          <h3>AWS Cloud Practitioner Essentials</h3>
+          <p>Fundamentals of Amazon Web Services cloud infrastructure, security, core services, and architectural principles.</p>
+          <div>
+            <span>AWS</span>
+            <span class="cert-link-btn">Verify Credential ↗</span>
+          </div>
+        </a>
+
+        <!-- Cert 2: Cisco Operating Systems -->
+        <a class="cert-card" href="https://www.linkedin.com/posts/rishitha-vajinepalli-9a40b9338_operatingsystems-cisconetworkingacademy-learningjourney-activity-7470517451017871360-iwKl" target="_blank" rel="noreferrer">
+          <h3>Operating Systems — Cisco</h3>
+          <p>In-depth coverage of OS architecture, process scheduling, memory allocation, storage, and system security fundamentals.</p>
+          <div>
+            <span>Cisco</span>
+            <span class="cert-link-btn">Verify Credential ↗</span>
+          </div>
+        </a>
+
+        <!-- Cert 3: Cisco JS 1 -->
+        <a class="cert-card" href="https://www.linkedin.com/posts/rishitha-vajinepalli-9a40b9338_javascript-coding-webdevelopment-activity-7470514001777516544-jPUk" target="_blank" rel="noreferrer">
+          <h3>JavaScript Essentials 1 — Cisco</h3>
+          <p>Foundations of modern JavaScript programming, variables, control flow, functions, and algorithmic problem solving.</p>
+          <div>
+            <span>Cisco</span>
+            <span class="cert-link-btn">Verify Credential ↗</span>
+          </div>
+        </a>
+
+        <!-- Cert 4: Cisco JS 2 -->
+        <a class="cert-card" href="https://www.linkedin.com/posts/rishitha-vajinepalli-9a40b9338_javascript-coding-webdevelopment-activity-7470516906555346944-aDt-" target="_blank" rel="noreferrer">
+          <h3>JavaScript Essentials 2 — Cisco</h3>
+          <p>Advanced JavaScript topics including OOP, closures, asynchronous execution, and modern browser APIs.</p>
+          <div>
+            <span>Cisco</span>
+            <span class="cert-link-btn">Verify Credential ↗</span>
+          </div>
+        </a>
+
+        <!-- Cert 5: NPTEL E-Business -->
+        <a class="cert-card" href="https://www.linkedin.com/posts/rishitha-vajinepalli-9a40b9338_excited-to-share-that-i-have-successfully-activity-7460944308309770240-MU0A" target="_blank" rel="noreferrer">
+          <h3>E-Business — NPTEL (63%)</h3>
+          <p>Comprehensive study of digital commerce frameworks, electronic payments, and internet business models.</p>
+          <div>
+            <span>NPTEL</span>
+            <span class="cert-link-btn">Verify Credential ↗</span>
+          </div>
+        </a>
+
+        <!-- Achievement 1: Hackathon -->
+        <div class="cert-card">
+          <h3>University Hackathon @ VFSTR (2026)</h3>
+          <p>Participated in an intense multi-round university-level hackathon at Vignan's University building creative software solutions.</p>
+          <div>
+            <span>VFSTR</span>
+            <span class="cert-link-btn">Achievement ★</span>
+          </div>
+        </div>
+
+        <!-- Achievement 2: Mathematics Day -->
+        <div class="cert-card">
+          <h3>National Mathematics Day Certificate</h3>
+          <p>Awarded an Appreciation Certificate on National Mathematics Day for analytical excellence and mathematical problem solving.</p>
+          <div>
+            <span>Honor</span>
+            <span class="cert-link-btn">Achievement ★</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT SECTION (Pure HTML & CSS Action) -->
+    <section id="contact" class="section container contact-section" aria-label="Contact">
+      <div class="eyebrow">Let's Connect</div>
+      <h2>Open for <em>Opportunities</em> & Collaborations</h2>
+      <p class="sub" style="max-width: 600px; margin: 0 auto 36px;">
+        Email or send a message — open to internship opportunities, frontend development roles, and technical collaborations.
+      </p>
+
+      <!-- Pure HTML Email Form -->
+      <div class="contact-form-card">
+        <form class="form" action="mailto:vajinepallirishitha@gmail.com" method="GET" enctype="text/plain">
+          <div class="row">
+            <input class="input" type="text" name="name" placeholder="Your Name" aria-label="Your Name" required />
+            <input class="input" type="email" name="email" placeholder="Your Email Address" aria-label="Your Email" required />
+          </div>
+          <input class="input" type="text" name="subject" placeholder="Subject / Topic" aria-label="Subject" required />
+          <textarea class="textarea" name="body" placeholder="Your message here..." aria-label="Message" required></textarea>
+          <div class="form-actions">
+            <button class="submit" type="submit">Send Message ↗</button>
+            <span class="note">Opens your default email client directly</span>
+          </div>
+        </form>
+      </div>
+
+      <!-- Direct Contact Details -->
+      <div class="contact-details">
+        <div>
+          <span>Email: </span>
+          <a href="mailto:vajinepallirishitha@gmail.com">vajinepallirishitha@gmail.com</a>
+        </div>
+        <div>
+          <span>Phone: </span>
+          <a href="tel:+919390541270">+91 93905 41270</a>
+        </div>
+        <div>
+          <span>Location: </span>
+          <span>Guntur, Andhra Pradesh, India</span>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer container">
+    <span>© 2026 Rishitha Vajinepalli • All rights reserved.</span>
+    <div class="footer-links">
+      <a href="https://github.com/vajinepallirishitha-dot" target="_blank" rel="noreferrer">GitHub ↗</a>
+      <a href="https://leetcode.com/u/241fa04636/" target="_blank" rel="noreferrer">LeetCode ↗</a>
+      <a href="https://www.linkedin.com/in/rishitha-vajinepalli-9a40b9338" target="_blank" rel="noreferrer">LinkedIn ↗</a>
+      <a href="mailto:vajinepallirishitha@gmail.com">Email ↗</a>
+    </div>
+  </footer>
+</body>
+</html>
